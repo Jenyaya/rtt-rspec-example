@@ -2,6 +2,7 @@ require 'init'
 
 describe Car do
 
+
   let (:car) { Car.new }
 
   it 'has method brand' do
