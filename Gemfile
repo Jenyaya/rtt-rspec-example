@@ -5,4 +5,5 @@ group :test do
   gem 'json'
   gem 'faker'
   gem 'rest-client'
+  gem 'uuid'
 end

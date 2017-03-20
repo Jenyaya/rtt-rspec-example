@@ -1,0 +1,2 @@
+host: https://reqres.in
+ssl_certificate_verification: false

@@ -1,0 +1,48 @@
+# Team config file for 3.1.0 env
+
+use_endpoints: false
+endpoints: http://static-testhost.asia-1.integration-stage.com/endpoints
+
+# REST endpoint
+upstream_url: https://api-testhost.asia-1.integration-stage.com
+
+# WS endpoint
+upstream_ws: ws://ws-testhost.asia-1.integration-stage.com:1237
+upstream_wss: wss://ws-testhost.asia-1.integration-stage.com
+
+storage_url: http://static-testhost.asia-1.integration-stage:1235
+#http://cloud9-test.integration-stage.com:3000
+
+storage_realm: transport-i-6e172f94.asia-1.integration-stage.com
+
+# BUS endpoint
+bus_api_url: http://static-testhost.asia-1.integration-stage.com:1234
+#http://cloud9-test.integration-stage.com:8000
+
+#DB connection for mongo driver
+database_connection: api-testhost.asia-1.integration-stage.com
+db_port: 27017
+
+region: asia-1
+
+upstream_error_details_enabled: true
+
+aws_public_bucket_us_east_1: team-assets-test
+aws_private_bucket_us_east_1: team-assets-test
+aws_private_bucket_eu_west_1: team-assets-test
+
+aws_endpoint_us_east_1: tbd
+aws_endpoint_eu-west-1: tbd
+
+# Default users:
+default_platform_user: default_platform_user@example.com
+
+# Redis
+redis_host: api-testhost.asia-1.integration-stage.com
+redis_port: 1234
+
+ssl_certificate_verification: true
+
+# Default services versions overwrite:
+overwrite_default_versions:
+avid_iam_default_version: 3
