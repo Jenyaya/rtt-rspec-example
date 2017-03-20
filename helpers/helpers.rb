@@ -50,3 +50,10 @@ def new_string(n=600)
   1.upto(n) { |i| result << chars[rand(chars.size-1)] }
   result
 end
+
+def save_environment_to_config(environment: 'test')
+  path = Dir.pwd + '/config/set_env.yaml'
+  text = "# Specify on which environment_test_should be run\n# options: dev, integration, stage, production\nenvironment: #{environment}"
+  File.open(path, 'w') { |f| f.write text }
+  puts "----------- Saved environment to config: NAME #{environment.upcase} ----------------"
+end

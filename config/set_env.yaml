@@ -1,1 +1,3 @@
-environment: test
+# Specify on which environment_test_should be run
+# options: dev, integration, stage, production
+environment: dev
