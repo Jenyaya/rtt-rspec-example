@@ -32,10 +32,14 @@ class UserManagementServiceApi < ServiceApi
     UltimateRestClient.call_from_tests :post, url, {:token => base64(user_id)}
   end
 
-  def set_user_permissions
+  def set_user_permissions(user_id, data, token)
+    url = sprintf('%s/%s/%s/%s', self.url, 'users', user_id, 'permissions')
+    UltimateRestClient.call_from_tests :post, url, data, authorization_param(token)
   end
 
-  def get_user_permissions
+  def get_user_permissions(user_id, token)
+    url = sprintf('%s/%s/%s/%s', self.url, 'users', user_id, 'permissions')
+    UltimateRestClient.call_from_tests :get, url, nil, authorization_param(token)
   end
 
 end

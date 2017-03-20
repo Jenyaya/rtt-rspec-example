@@ -1,6 +1,6 @@
 require 'faker'
 
-class UserManagementData
+class UserData
 
   attr_accessor :data
 
@@ -30,6 +30,23 @@ class UserManagementData
   def address=(address)
     @data[:address] ||= address
   end
+
+
+end
+
+
+class UserPermissionsData
+
+ def self.permissions
+
+   {
+       :read => Faker::Boolean.boolean,
+       :write =>Faker::Boolean.boolean,
+       :view => Faker::Boolean.boolean,
+       :open => Faker::Boolean.boolean
+   }
+
+ end
 
 
 end
