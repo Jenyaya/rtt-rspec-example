@@ -9,6 +9,10 @@ describe Car do
     expect(Car.new).to respond_to(:brand)
   end
 
+  it '#brand' do
+    expect(Car.new).to respond_to(:brand)
+  end
+
   it :brand= do
     expect(Car.new).to respond_to(:brand=)
   end
