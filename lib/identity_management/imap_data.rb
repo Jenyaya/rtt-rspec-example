@@ -18,7 +18,6 @@ class UserData
     }
   end
 
-
   def first_name(first_name)
     @data[:first_name] ||= first_name
   end
@@ -30,7 +29,6 @@ class UserData
   def address=(address)
     @data[:address] ||= address
   end
-
 
 end
 

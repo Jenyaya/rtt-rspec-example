@@ -13,7 +13,7 @@ class UltimateRestClient
 
 
   def self.call_to_service(method, url, data, params)
-    start_time = Time.now
+
     RestClient::Request.execute(:method => method, :url => url, :headers => params, :payload => data, :verify_ssl => verify_certificate_flag) do |response, request, result|
       puts method.upcase, url, params.to_s, data
       # $profiler.debug sprintf(PROFILER_TEMPLATE, calc_time_spent(start_time, Time.now).to_s, method.upcase, url, params.to_s, data)
@@ -40,11 +40,11 @@ class UltimateRestClient
         return result
       else
         puts "[#{response.code}] UltimateRestClient: RESPONSE #{method.upcase}: " + response.to_s
+        puts result
         # $logger.info 'Response class in #call_from_tests ' + response.class.name
         # $logger.info 'Response result in #call_from_tests ' +  result.class.name
         return response
       end
-
 
     end
 
