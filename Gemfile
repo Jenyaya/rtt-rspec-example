@@ -6,4 +6,5 @@ group :test do
   gem 'faker'
   gem 'rest-client', '1.8.0'
   gem 'uuid'
+  gem 'ruby-debug-ide'
 end
